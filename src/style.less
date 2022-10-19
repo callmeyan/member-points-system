@@ -1,0 +1,58 @@
+@color-gray: #818181;
+
+:root {
+  --primary-color: #c39c69;
+  --primary-text-color: #1a1a1a;
+  --left-menu-width: 240px;
+  --text-size-small: 12px;
+  --text-size-default: 13px;
+  --text-size-middle: 16px;
+  --text-size-large: 18px;
+  --border-radius: 3px;
+}
+body,
+p,
+pre,
+input,
+textarea {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial,
+    Segoe UI, PingFang SC, Microsoft Yahei, Hiragino Sans GB, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: var(--text-size-default);
+  color: var(--primary-text-color);
+}
+.d-flex {
+  display: flex;
+}
+.d-f-center {
+  display: flex;
+  align-items: center;
+}
+.statistics {
+  .item {
+    padding: 10px 30px;
+    display: flex;
+    border-right: solid 1px #eee;
+    &:last-child{
+      border-right: none
+    }
+  }
+  .icon {
+    .d-f-center;
+    img {
+      width: 24px;
+    }
+  }
+  .content {
+    margin-left: 10px;
+  }
+  .title {
+    font-size: var(--text-size-small);
+    color: @color-gray;
+  }
+  .value {
+    color: #c39c69;
+    font-size: var(--text-size-middle);
+    font-weight: 600;
+  }
+}

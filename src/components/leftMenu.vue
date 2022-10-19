@@ -8,19 +8,15 @@
     <div class="login-info">
       <!-- 头像 -->
       <div class="avatar">
-        <img
-          src="https://img2.woyaogexing.com/2022/10/13/291c4aa65d68a9ec!400x400.jpg"
-        />
+        <img src="https://img2.woyaogexing.com/2022/10/13/291c4aa65d68a9ec!400x400.jpg" />
       </div>
       <div class="nickname">小甜甜</div>
       <div class="logout">退出</div>
     </div>
-
-    <h1>11</h1>
     <Menu :menus="menus" />
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import Menu from "./Menu.vue";
 const menus = [
   //http://127.0.0.1:3333/assets/circle.svg
@@ -58,23 +54,29 @@ const menus = [
   },
 ];
 </script>
-<style>
+<style lang="less">
 .left-menu {
   background-color: #282f36;
-  width: 200px;
+  width: var(--left-menu-width);
+  height: 100%;
   color: var(--primary-color);
   text-align: center;
 }
-.app-title{
-    padding:20px 0;
+
+.app-title {
+  padding: 20px 0;
 }
-.big-text{
-    font-size:24px;
+
+.big-text {
+  font-size: 24px;
+  margin-right: 4px;
 }
+
 .login-info {
   background-color: #242a31;
-  padding:40px 0;
+  padding: 40px 0;
 }
+
 .avatar img {
   width: 60px;
   height: 60px;
