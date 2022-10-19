@@ -44,10 +44,43 @@ textarea {
 }
 .statistics .title {
   font-size: var(--text-size-small);
-  color: #818181;
 }
 .statistics .value {
   color: #c39c69;
   font-size: var(--text-size-middle);
   font-weight: 600;
+}
+.table-panel .search-form {
+  padding: 15px;
+  display: flex;
+}
+.table-panel .search-form span {
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0 10px;
+}
+.pro-input {
+  border: 1px solid #eaeaea;
+  outline: none;
+  border-radius: 2px;
+  padding: 5px 10px;
+}
+.pro-input:focus,
+.pro-input:hover {
+  border-color: #999;
+}
+.pro-table {
+  width: 100%;
+  border-left: 1px solid #eaeaea;
+  border-top: 1px solid #eaeaea;
+  border-collapse: collapse;
+}
+.pro-table thead {
+  background-color: #f6f6f6;
+}
+.pro-table td {
+  border-right: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  padding: 5px 10px;
+  text-align: center;
 }

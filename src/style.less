@@ -1,4 +1,9 @@
 @color-gray: #818181;
+@color-table-border: #eaeaea;
+@table-border:1px solid @color-table-border;
+@border-radius-sm: 2px;
+@border-radius: 3px;
+@border-radius-md: 4px;
 
 :root {
   --primary-color: #c39c69;
@@ -8,7 +13,7 @@
   --text-size-default: 13px;
   --text-size-middle: 16px;
   --text-size-large: 18px;
-  --border-radius: 3px;
+  --border-radius: @border-radius;
 }
 body,
 p,
@@ -33,8 +38,8 @@ textarea {
     padding: 10px 30px;
     display: flex;
     border-right: solid 1px #eee;
-    &:last-child{
-      border-right: none
+    &:last-child {
+      border-right: none;
     }
   }
   .icon {
@@ -48,11 +53,45 @@ textarea {
   }
   .title {
     font-size: var(--text-size-small);
-    color: @color-gray;
   }
   .value {
     color: #c39c69;
     font-size: var(--text-size-middle);
     font-weight: 600;
+  }
+}
+.table-panel {
+  .search-form{
+    padding: 15px;
+    .d-flex;
+    span{
+      vertical-align: middle;
+      display: inline-block;
+      margin: 0 10px;
+    }
+  }
+}
+.pro-input {
+  border: @table-border;
+  outline: none;
+  border-radius: @border-radius-sm;
+  padding: 5px 10px;
+  &:focus,&:hover{
+    border-color: #999;
+  }
+}
+.pro-table {
+  width: 100%;
+  border-left: @table-border;
+  border-top: @table-border;
+  border-collapse: collapse;
+  thead {
+    background-color: #f6f6f6;
+  }
+  td {
+    border-right: @table-border;
+    border-bottom: @table-border;
+    padding: 5px 10px;
+    text-align: center;
   }
 }
