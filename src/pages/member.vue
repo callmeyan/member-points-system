@@ -1,6 +1,6 @@
 <!-- 会员管理页面 -->
 <template>
-  <Page title="会员管理">
+  <Page title="会员管理123">
     <Statistics :items="statisticsItems" />
     <div class="panel">
       <div class="table-panel">
@@ -40,6 +40,7 @@
         </div>
       </div>
     </div>
+    <h1>123123</h1>
   </Page>
 </template>
 <script setup lang="ts">

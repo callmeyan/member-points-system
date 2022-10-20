@@ -1,7 +1,8 @@
 <template>
   <div class="menu">
     <ul>
-      <li v-for="(m, index) in menus" :class="{ active: index == activeMenu }" :key="index" @click="activeMenu = index">
+      <li v-for="(m, index) in menus" :class="{ active: index == activeMenu }" :key="index"
+       @click="activeMenu = index">
         <span class="prefix">
           <em v-if="m.isSvg" v-html="m.icon"></em>
           <template v-else><img v-if="m.icon" :src="m.icon" alt="" /></template>
@@ -33,7 +34,9 @@ type MenuType = {
 defineProps<{
   menus: MenuType[]
 }>();
+// vue 响应式(双向绑定的原理)
 const activeMenu = ref(0);
+console.log(activeMenu)
 </script>
 
 <style scoped lang="less">
